@@ -1,5 +1,5 @@
 from pathlib import Path
-import os,shutil
+import os,shutil, ctypes
 
 listaformatos = []
 path = Path("C:/Users/Eduardo/Desktop/")
@@ -14,9 +14,12 @@ def mover(listaformatos):
     for filename in path.glob('*'):
         
         if filename.suffix in listaformatos:
+            try:
 
-            verificaPasta("G:/Meu Drive/{}".format(filename.suffix)) 
-            shutil.move(filename, "G:/Meu Drive/{}/{}".format(filename.suffix,filename.name))
+                verificaPasta("G:/Meu Drive/{}".format(filename.suffix)) 
+                shutil.move(filename, "G:/Meu Drive/{}/{}".format(filename.suffix,filename.name))
+            except WindowsError:
+                ctypes.windll.user32.MessageBoxW(0, "O arquivo esta sendo utilizado por outro processo", "Erro no Script", 0)
 
         else:
             print("não esta na lista")
