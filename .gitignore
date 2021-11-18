@@ -1,0 +1,11 @@
+
+build/backup/Tree-02.toc
+*.pyz
+*.pkg
+*.toc
+*.manifest
+*.txt
+*.html
+*.zip
+*.spec
+*.pyc
