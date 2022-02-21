@@ -15,14 +15,20 @@ def mover(listaformatos):
         
         if filename.suffix in listaformatos:
 
-            verificaPasta("G:/Meu Drive/{}".format(filename.suffix)) 
-            shutil.move(filename, "G:/Meu Drive/{}/{}".format(filename.suffix,filename.name))
+            with open("C:/Users/Eduardo/Desktop/config/caminho.txt") as file:
+                caminho = []
+                for line in file:
+                    caminho.append(line.replace("\n","")) 
+            
+            verificaPasta("{}/{}".format(caminho[0],filename.suffix)) 
+            #verificaPasta("G:/Meu Drive/{}".format(filename.suffix)) 
+            shutil.move(filename, "{}/{}/{}".format(caminho[0],filename.suffix,filename.name))
 
         else:
             print("não esta na lista")
 
 with open("C:/Users/Eduardo/Desktop/config/tipos.txt") as file:
     for line in file:
-        listaformatos.append(line.replace("\n",""))       
+        listaformatos.append(line.replace("\n",""))  
     
 mover(listaformatos)

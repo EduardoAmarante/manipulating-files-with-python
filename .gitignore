@@ -1,0 +1,10 @@
+
+*.toc
+*.pkg
+*.zip
+*.manifest
+build/backup/xref-backup.html
+dist/backup.exe
+*.pyz
+*.spec
+*.pyc
