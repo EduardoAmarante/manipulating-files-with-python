@@ -14,6 +14,8 @@ def separarPorTipo(nomePasta,filename):
                 except WindowsError:
                     ctypes.windll.user32.MessageBoxW(0, "O arquivo esta sendo utilizado por outro processo", "Erro no Script", 0)
 
+
+
 def verificaPasta(caminho):
     try:
         os.mkdir(caminho)
@@ -48,5 +50,7 @@ def mover(listaformatos):
 with open("C:/Users/Eduardo/Desktop/config/tipos.txt") as file:
     for line in file:
         listaformatos.append(line.replace("\n",""))  
-    
-mover(listaformatos)
+
+if __name__ == "__backup__":
+    #mover(listaformatos)
+    print('rodou')
