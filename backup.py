@@ -1,11 +1,13 @@
 from pathlib import Path
 import os,shutil, ctypes
 
-listaformatos = []
+
+user = 'eamar'
+
 formatosPlanilhas = ['.xlsx','.ods','.csv']
 formatosDocs = ['.odt','.docx','.pptx']
 formatoImages = ['.jpg','.jpeg','.JPG','.JPEG','.png']
-path = Path("C:/Users/Eduardo/Desktop/")
+path = Path("C:/Users/{}/Desktop/".format(user))
 
 def separarPorTipo(nomePasta,filename):
                 try:
@@ -50,7 +52,3 @@ def mover(listaformatos):
 with open("C:/Users/Eduardo/Desktop/config/tipos.txt") as file:
     for line in file:
         listaformatos.append(line.replace("\n",""))  
-
-if __name__ == "__backup__":
-    #mover(listaformatos)
-    print('rodou')
