@@ -3,8 +3,7 @@
 *.pkg
 *.zip
 *.manifest
-build/backup/xref-backup.html
-dist/backup.exe
+build/
 *.pyz
 *.spec
 *.pyc
