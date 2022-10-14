@@ -4,7 +4,7 @@ import shutil
 def move(nameFolder,filename):
     # move os arquivos da area de trabalho para o caminho especificado
     shutil.move(filename, "C:/Users/{}/{}/{}".format(user,nameFolder, filename.name))
-    print("Moving... {}".format(filename.name)) 
+    print("Moving the file... {}".format(filename.name)) 
     
 def analyze_and_move():
     # loop que verifica todos arquivos do path
@@ -27,7 +27,7 @@ user = 'eamar'
 # listas organizadas de acordo com os tipos de arquivos a serem manipulados
 formatosDocs = ['.odt','.docx','.pptx','.xlsx','.ods','.csv','.pdf']
 formatoImages = ['.jpg','.jpeg','.JPG','.JPEG','.png','.xcf']
-formatoVideo = ['.mp4','.mkv']
+formatoVideo = ['.MP4','.mp4','.mkv','.mlt','.MOV','.HVEC']
 formatoDownloads = ['.zip','.exe']
 
 # gera o Path para ser compativel com o shutil
