@@ -1,4 +1,4 @@
 # Manipulating Files with Python
-Manipulando arquivos e diretórios no Windows usando Python
+Manipulating Files and Directories in Windows Using Python
 
-## O objetivo do script é organizar os diretórios padrão do windows e facilitar backup
+## The script is intended to organize the windows desktop items within the pictures, videos, documents folders.
