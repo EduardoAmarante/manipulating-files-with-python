@@ -5,7 +5,7 @@ def move(nameFolder,filename):
     # move os arquivos da area de trabalho para o caminho especificado
     shutil.move(filename, "C:/Users/{}/{}/{}".format(user,nameFolder, filename.name))
     print("Moving the file... {}".format(filename.name)) 
-    
+
 def analyze_and_move():
     # loop que verifica todos arquivos do path
     for filename in path.glob('*'):
@@ -26,7 +26,7 @@ user = 'eamar'
 
 # listas organizadas de acordo com os tipos de arquivos a serem manipulados
 formatosDocs = ['.odt','.docx','.pptx','.xlsx','.ods','.csv','.pdf']
-formatoImages = ['.jpg','.jpeg','.JPG','.JPEG','.png','.xcf']
+formatoImages = ['.jpg','.jpeg','.JPG','.JPEG','.png','.xcf','.HEIC']
 formatoVideo = ['.MP4','.mp4','.mkv','.mlt','.MOV','.HVEC']
 formatoDownloads = ['.zip','.exe']
 
